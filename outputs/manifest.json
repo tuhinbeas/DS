@@ -1,0 +1,68 @@
+{
+  "built_at_utc": "2026-10-22T08:21:40+00:00",
+  "n_series": 30490,
+  "n_days": 1913,
+  "data_start": "2011-01-29",
+  "data_end": "2016-04-24",
+  "train": [
+    "2011-01-29",
+    "2015-10-27"
+  ],
+  "validation": [
+    "2015-10-28",
+    "2016-01-25"
+  ],
+  "test": [
+    "2016-01-26",
+    "2016-04-24"
+  ],
+  "forecast": [
+    "2016-04-25",
+    "2016-07-23"
+  ],
+  "history_days_kept": 365,
+  "horizon": 90,
+  "models_available": [
+    "Seasonal Naive",
+    "LightGBM"
+  ],
+  "champion": "LightGBM",
+  "skipped_models": {
+    "LSTM": "ModuleNotFoundError: No module named 'tensorflow.python'"
+  },
+  "features": [
+    "lag_1",
+    "lag_7",
+    "lag_14",
+    "lag_28",
+    "rolling_mean_7",
+    "rolling_mean_28",
+    "wday",
+    "month",
+    "snap_CA",
+    "snap_TX",
+    "snap_WI"
+  ],
+  "lightgbm_params": {
+    "learning_rate": 0.05,
+    "n_estimators": 100,
+    "num_leaves": 31,
+    "objective": "regression",
+    "random_state": 42
+  },
+  "lstm_summary": "",
+  "model_file_hashes": {
+    "lightgbm_champion_model.pkl": "fa2872610446",
+    "lstm_neural_network_model.keras": "60faf45c7500",
+    "minmax_scalers.pkl": "4b44e3df5867"
+  },
+  "library_versions": {
+    "python": "3.12.0",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "sklearn": "1.6.1",
+    "lightgbm": "4.7.0"
+  },
+  "null_values_filled_with_zero": true,
+  "snap_beyond_calendar": "copied from latest known same day-of-month"
+}

@@ -1,0 +1,8 @@
+# To RUN the dashboard (after outputs/ exists)
+streamlit>=1.50
+plotly>=5.20
+pandas>=2.2
+numpy>=1.26
+scikit-learn==1.6.1   # scalers were pickled with 1.6.1; match your Colab version
+lightgbm              # same version as Colab: !pip show lightgbm
+tensorflow>=2.18      # loads the .keras LSTM (Keras 3.x; file was saved with keras 3.13.2)
